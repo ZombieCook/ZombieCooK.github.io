@@ -1,20 +1,82 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width" />
-    <title>You Are Awesome!</title>
-    <link rel="stylesheet" href="css/style.css" />
+    <title>Vanilla Challenage</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/index.css" />
   </head>
+
   <body>
     <div class="wrapper-screen">
-      <a href="./sign-up.html">
-        <i class="fa-sharp fa-solid fa-comment fa-8x"> </i>
-      </a>
+      <div class="clock-wrapper">
+        <span class="clock-year"></span>
+        <span> </span>
+        <span class="clock-month"></span>
+        <span> </span>
+        <span class="clock-date"></span>
+        <span> </span>
+        <span class="clock-day"></span>
+        <span> </span>
+        <span class="clock-hour"></span>
+        <span>:</span>
+        <span class="clock-min"></span>
+        <span>:</span>
+        <span class="clock-sec rotate-animation"></span>
+      </div>
+      <div class="weather-wrapper">
+        <span class="weather-span"></span>
+      </div>
+      <div class="map-wrapper">
+        <div class="map-box"></div>
+      </div>
+
+      <div class="extra-header hidden">
+        <span class="greet-user"></span>
+        <div id="profile-photo"></div>
+      </div>
+
+      <div id="login-wrapper">
+        <form id="login-form">
+          <input
+            minlength="3"
+            maxlength="10"
+            type="text"
+            id="id"
+            name="id"
+            placeholder="YOUR NAME"
+            required
+          />
+        </form>
+        <form id="logout-form" class="hidden">
+          <input type="button" value="로그 아웃" />
+        </form>
+      </div>
+
+      <div class="todoList-wrapper"></div>
     </div>
+
+    <dialog id="login-dialog">
+      <form method="dialog">
+        <p>It's not enrolled yet. Do you want to sign in?</p>
+        <menu>
+          <button value="cancel">취소</button>
+          <button id="confirm-button">확인</button>
+        </menu>
+      </form>
+    </dialog>
+
+    <script src="js/global.js"></script>
+    <script src="js/time.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/login.js"></script>
+
+    <!-- font Awesome -->
     <script
       src="https://kit.fontawesome.com/aa3bccc491.js"
       crossorigin="anonymous"
     ></script>
+
+    <!-- 구글 지도 -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB1oC0CLoUiD2PbCW4Znp8uhJc6chKN3qw&callback=displayMap"></script>
   </body>
 </html>

@@ -1,0 +1,56 @@
+.rotate-animation {
+  animation: flip 1s infinite;
+  animation-delay: 0.2s;
+}
+
+.rotate-animation-onetime {
+  animation: flip 1s;
+}
+
+#profile-photo {
+  display: flex;
+  width: 300px;
+  height: 300px;
+}
+
+.clock-wrapper {
+  display: flex;
+  font-size: 40px;
+  color: #fff;
+}
+
+.extra-header > * {
+  color: #fff;
+}
+
+.clock-wrapper > * {
+  margin-right: 5px;
+}
+
+.map-wrapper {
+  display: flex;
+}
+
+.map-box {
+  width: 300px;
+  height: 300px;
+}
+
+@keyframes flip {
+  0%,
+  50% {
+    transform: rotateX(360deg);
+  }
+}
+
+body {
+  background-color: black;
+}
+
+.wrapper-screen > * {
+  margin: 10px 0px;
+}
+
+.hidden {
+  display: none;
+}
